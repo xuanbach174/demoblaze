@@ -1,4 +1,4 @@
-import { Page, expect } from "@playwright/test";
+import { Dialog, Page, expect } from "@playwright/test";
 import { BasePage } from "./BasePage";
 
 export class LoginPage extends BasePage {
@@ -65,7 +65,7 @@ export class LoginPage extends BasePage {
         await expect(this.welcomeUserLocator()).toContainText(username);
     }
 
-    async verifyErrorMessageWithInvalidCredentials(errorMessage: string[], dialog){
+    async verifyErrorMessageWithInvalidCredentials(errorMessage: string[], dialog:Dialog){
         expect(errorMessage).toContain(dialog.message());
         await dialog.dismiss();
     }
@@ -74,7 +74,7 @@ export class LoginPage extends BasePage {
         expect(message).toContain(errorMessage);
     }
 
-    async verifyErrorMessageWithSQLInjection (errorMessage: string[], dialog){
+    async verifyErrorMessageWithSQLInjection (errorMessage: string[], dialog: Dialog){
         expect(errorMessage).toContain(dialog.message());
         await dialog.dismiss();
     }

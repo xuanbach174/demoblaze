@@ -9,10 +9,16 @@ export class ProductPage extends BasePage {
         this.addToCartButton = page.locator('.btn-success');
     }
 
+    private itemName (){
+        return this.page.locator('.row .name');
+    }
+
     async addToCart() {
         const dialogPromise = this.page.waitForEvent('dialog');
+        const itemName = await this.itemName().textContent();
         await this.addToCartButton.click();
         const dialog = await dialogPromise;
         await dialog.accept();
+        return itemName
     }
 }
