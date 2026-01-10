@@ -34,3 +34,4 @@ Run all test: npx playwright test
 Run a specific project:
   npx playwright test --project=apiTest
   playwright test --project=tests_ui
+
