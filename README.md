@@ -1,4 +1,5 @@
 --Please view this file in IDE or in Code view--
+
 **99TECH Automation Suite (Playwright & TypeScript)**
 This repository hosts an end-to-end (E2E) automation testing suite built with Playwright and TypeScript. It utilizes a structured Page Object Model (POM) approach and includes separate suites for both UI and API testing.
 🚀 **Technologies Used**
