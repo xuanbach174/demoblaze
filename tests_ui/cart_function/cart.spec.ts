@@ -55,8 +55,8 @@ test.describe('Test Login Function', () => {
         });
 
         await test.step('Verify Product List in Browser 1 contains all added items', async () => {
-            productName1?.trim();
-            productName2?.trim();
+            productName1 = productName1?.trim()?? null;
+            productName2 = productName2?.trim()?? null;
             await cartPage.accessCartScreen();
             await cartPage.verifyProductListContainsAllItemsFromOtherBrowsers(productName1, productName2);
             await cartPage.deleteAllItems();
