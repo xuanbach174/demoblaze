@@ -28,5 +28,4 @@ import { log } from 'node:console';
             const dialog = await loginPage.loginWithInvalidCredentials(testData.login.usernameSQLInjection, testData.login.passwordSQLInjection);
             await loginPage.verifyErrorMessageWithSQLInjection(testData.login.errorMessage, dialog);
         })
-
     })
