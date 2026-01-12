@@ -70,7 +70,7 @@ npx playwright test
 npx playwright test --project=apiTest
 
 # Run UI tests
-npx playwright test --project=tests_ui
+npx playwright test --project=uiTest
 ```
 
 ---
