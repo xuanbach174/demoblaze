@@ -22,15 +22,18 @@ The project is organized to separate UI tests, API tests, page objects, and data
 ├── .github/                   # CI/CD workflows
 │   └── workflows/
 │       └── playwright.yml
-├── api_services/              # API interaction classes (AuthService, CartService, etc.)
+├── api_services/              # API interaction classes (AuthService, BaseApiService)
+├── data/                      # Test data and environment configurations
 ├── fixtures/                  # Playwright fixtures and test hooks
-├── pages/                     # UI Page Object Models (loginPage, homePage, etc.)
+├── pages/                     # UI Page Object Models (LoginPage, HomePage, etc.)
+├── perfomance_test/           # Performance testing scripts and configurations
 ├── tests_api/                 # API endpoint tests
 │   ├── auth/
-│   └── order/
+│   └── testData.ts
 ├── tests_ui/                  # User interface E2E tests
 │   ├── cart_function/
 │   └── login_function/
+├── .env                       # Environment variables
 ├── playwright.config.ts       # Main configuration file
 └── package.json               # Dependencies and scripts
 ```
