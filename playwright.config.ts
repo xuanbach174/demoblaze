@@ -39,7 +39,7 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'uiTest',
       testDir: 'tests_ui',
       use: { 
         ...devices['Desktop Chrome'], 
