@@ -1,39 +1,80 @@
---Please view this file in IDE or in Code view--
+# 99TECH Automation Suite (Playwright & TypeScript)
 
-**99TECH Automation Suite (Playwright & TypeScript)**
-This repository hosts an end-to-end (E2E) automation testing suite built with Playwright and TypeScript. It utilizes a structured Page Object Model (POM) approach and includes separate suites for both UI and API testing.
-🚀 **Technologies Used**
-Playwright: The primary automation framework.
-TypeScript: Provides type safety and robust code structure.
-Page Object Model (POM): For organized UI component management.
-GitHub Actions: (Configured in .github/workflows/) For continuous integration.
-📁 **Project Structure**
-This structure separates UI tests, API tests, page objects, and data files clearly:
-I applied Page Object Model to develop the project
+This repository hosts a comprehensive end-to-end (E2E) automation testing suite built with **Playwright** and **TypeScript**. It utilizes a structured **Page Object Model (POM)** approach and includes separate suites for both UI and API testing.
+
+---
+
+## 🚀 Technologies Used
+
+- **Playwright**: The primary automation framework.
+- **TypeScript**: Provides type safety and robust code structure.
+- **Page Object Model (POM)**: For organized UI component management.
+- **GitHub Actions**: Configured for continuous integration.
+
+---
+
+## 📁 Project Structure
+
+The project is organized to separate UI tests, API tests, page objects, and data files clearly:
+
+```text
 .
 ├── .github/                   # CI/CD workflows
 │   └── workflows/
 │       └── playwright.yml
-├── api_services/              # API interaction classes, same purpose as pages folder (e.g., AuthService, CartService, ProductService...)
-├── fixtures/                  # Playwright fixtures and test hooks, I setup my project with fixture
-├── pages/                     # UI Page Object Models (POMs), contains all pages of the application (loginPage, homePage, CartPage...)
-├── tests_api/                 # API endpoint tests, we will create tests here and execute it
+├── api_services/              # API interaction classes (AuthService, CartService, etc.)
+├── fixtures/                  # Playwright fixtures and test hooks
+├── pages/                     # UI Page Object Models (loginPage, homePage, etc.)
+├── tests_api/                 # API endpoint tests
 │   ├── auth/
 │   └── order/
 ├── tests_ui/                  # User interface E2E tests
 │   ├── cart_function/
 │   └── login_function/
 ├── playwright.config.ts       # Main configuration file
-├── package.json               # Dependencies and scripts
-└── ... (other standard files/folders like node_modules, test-results)
-**Install:**
-1. Clone Repo
-2. Install project dependencies:
+└── package.json               # Dependencies and scripts
+```
+
+---
+
+## 🛠️ Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd <repository-name>
+   ```
+
+2. **Install project dependencies:**
+   ```bash
    npm install
-3. Install Playwright browser binaries:
+   ```
+
+3. **Install Playwright browser binaries:**
+   ```bash
    npx playwright install
-**Run Test**
-Run all test: npx playwright test
-Run a specific project:
-  npx playwright test --project=apiTest
-  playwright test --project=tests_ui
+   ```
+
+---
+
+## 🧪 Running Tests
+
+### Run all tests:
+```bash
+npx playwright test
+```
+
+### Run a specific project:
+```bash
+# Run API tests
+npx playwright test --project=apiTest
+
+# Run UI tests
+npx playwright test --project=tests_ui
+```
+
+---
+
+## ⚙️ Continuous Integration
+
+GitHub Actions are configured in `.github/workflows/playwright.yml` to automatically run tests on every push and pull request.
