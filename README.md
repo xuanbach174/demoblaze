@@ -77,4 +77,4 @@ npx playwright test --project=tests_ui
 
 ## ⚙️ Continuous Integration
 
-GitHub Actions are configured in `.github/workflows/playwright.yml` to automatically run tests on every push and pull request.
+GitHub Actions are configured in `.github/workflows/playwright.yml` to automatically run tests on every push request.
