@@ -70,7 +70,30 @@ npx playwright test
 npx playwright test --project=apiTest
 
 # Run UI tests
-npx playwright test --project=uiTest
+npx playwright test --project=tests_ui
+```
+
+---
+
+## ⚡ Performance Testing
+
+Performance testing is handled by **Artillery** using the **Playwright engine**.
+
+### Prerequisites
+
+Ensure you have installed all dependencies, including Artillery:
+
+```bash
+# Install all project dependencies (including Artillery)
+npm install
+
+# Or specifically install Artillery if needed
+npm install artillery --save-dev
+```
+
+### Run Login Performance Test:
+```bash
+npx artillery run perfomance_test/login_performance.yml
 ```
 
 ---
