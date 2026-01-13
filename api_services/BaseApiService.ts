@@ -9,9 +9,6 @@ export class BaseApiService {
         this.baseURL = baseURL;
     }
 
-    /**
-     * Generic GET request
-     */
     async get(endpoint: string, options?: { headers?: Record<string, string>, params?: Record<string, string> }): Promise<APIResponse> {
         const url = `${this.baseURL}${endpoint}`;
         return await this.request.get(url, {
@@ -20,9 +17,6 @@ export class BaseApiService {
         });
     }
 
-    /**
-     * Generic POST request
-     */
     async post(endpoint: string, data?: any, options?: { headers?: Record<string, string> }): Promise<APIResponse> {
         const url = `${this.baseURL}${endpoint}`;
         return await this.request.post(url, {
@@ -34,9 +28,6 @@ export class BaseApiService {
         });
     }
 
-    /**
-     * Generic PUT request
-     */
     async put(endpoint: string, data?: any, options?: { headers?: Record<string, string> }): Promise<APIResponse> {
         const url = `${this.baseURL}${endpoint}`;
         return await this.request.put(url, {
@@ -48,9 +39,6 @@ export class BaseApiService {
         });
     }
 
-    /**
-     * Generic DELETE request
-     */
     async delete(endpoint: string, options?: { headers?: Record<string, string> }): Promise<APIResponse> {
         const url = `${this.baseURL}${endpoint}`;
         return await this.request.delete(url, {
@@ -58,9 +46,6 @@ export class BaseApiService {
         });
     }
 
-    /**
-     * Generic PATCH request
-     */
     async patch(endpoint: string, data?: any, options?: { headers?: Record<string, string> }): Promise<APIResponse> {
         const url = `${this.baseURL}${endpoint}`;
         return await this.request.patch(url, {
