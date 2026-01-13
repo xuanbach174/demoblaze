@@ -17,9 +17,6 @@ export class AuthService extends BaseApiService {
         super(request, baseURL);
     }
 
-    /**
-     * Login with credentials
-     */
     async login(credentials: LoginCredentials): Promise<APIResponse> {
         return await this.post('/login', credentials);
     }

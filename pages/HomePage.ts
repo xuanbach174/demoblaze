@@ -12,7 +12,7 @@ export class HomePage extends BasePage {
     }
 
     async goto() {
-        await this.navigateTo('https://www.demoblaze.com/');
+        await this.navigateTo(process.env.API_BASE_URL || "https://www.demoblaze.com/");
     }
 
     async selectRandomProduct() {
